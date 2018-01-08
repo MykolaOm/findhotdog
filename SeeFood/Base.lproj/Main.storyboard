@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tFy-sQ-qhm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SeeFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qeY-Wb-xKO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80B-GA-sZw">
+                                <rect key="frame" x="146" y="605" width="83" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="share">
+                                    <color key="titleColor" red="0.34150089795228789" green="0.49335031565180643" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButtonTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n50-dU-8oN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qeY-Wb-xKO" firstAttribute="leading" secondItem="e4O-sT-be4" secondAttribute="leading" id="4RU-sN-h7X"/>
+                            <constraint firstItem="qeY-Wb-xKO" firstAttribute="trailing" secondItem="e4O-sT-be4" secondAttribute="trailing" id="6TI-5t-35u"/>
+                            <constraint firstItem="qeY-Wb-xKO" firstAttribute="bottom" secondItem="e4O-sT-be4" secondAttribute="bottom" id="GbY-D9-NmL"/>
+                            <constraint firstItem="qeY-Wb-xKO" firstAttribute="top" secondItem="e4O-sT-be4" secondAttribute="top" id="pTI-YU-Mt0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="e4O-sT-be4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YwE-Wz-a4s">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="zv4-Vo-Tah">
+                            <connections>
+                                <action selector="cameraTapped:" destination="BYZ-38-t0r" id="hSU-Lc-bxS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="qeY-Wb-xKO" id="LsF-Zn-h2L"/>
+                        <outlet property="shareButton" destination="80B-GA-sZw" id="zcu-h0-neq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="456.80000000000001" y="117.39130434782609"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aEg-eI-Jrb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tFy-sQ-qhm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zzA-KH-hWX">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kBI-4A-bWn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZmT-i9-0kK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-404" y="117"/>
+        </scene>
+    </scenes>
+</document>
